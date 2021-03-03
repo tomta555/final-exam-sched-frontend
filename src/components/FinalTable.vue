@@ -3776,6 +3776,7 @@
         course:Array
 
       },
+      nameTable:String
     },
 
   }   

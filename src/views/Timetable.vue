@@ -75,9 +75,9 @@
             </b-btn>
           </div>
         <div style="text-align:center; margin:5; font-size:2.2vh; color:red" v-if='term_cout==data.data.sched_table.length-1' >
-            <p>ขอบคุณที่ช่วยแสดงความคิดเห็น</p>
-             ถ้าสุ่มผู้โชคดีแล้วจะแจ้งไปทาง CMU Mail นะครับ
             <br>
+            <p>ขอบคุณที่ช่วยแสดงความคิดเห็น</p>
+            
              
           </div>
 
@@ -166,23 +166,13 @@ export default {
 
   async get_token() {
   const code_auth = window.location.search.slice(1).split("=")[1];
-  const data = qs.stringify({
-    code: code_auth,
-    redirect_uri: "https://affectionate-roentgen-01a06a.netlify.app/timetable",
-    client_id: "TG48TWd9TqUgcSMSh5kKva4hepaSnEH45fQHueRu",
-    client_secret: "ua4sgC2d7h9BudXTNX3DWyXnTZm6ccycq1sufPaP",
-    grant_type: "authorization_code",
-  });
   const config = {
-    method: "post",
-    url: "https://oauth.cmu.ac.th/v1/GetToken.aspx/",
-    headers: {
-      "Content-Type": "application/x-www-form-urlencoded",
-    },
-    data: data,
+    method: "get",
+    url: "https://final-exam-web-eval.herokuapp.com/api/token/"+code_auth
+
   };
   var response = await axios(config);
-  this.token = response.data.access_token;
+  this.token = response.data.data.token
 },
 async get_id(){
   var config = {
@@ -197,7 +187,7 @@ async get_id(){
 },
 async get_timetable() {
   var timetable = {}
-  const config = {
+  const config = {  
     method: "get",
     url: "https://final-exam-web-eval.herokuapp.com/api/timetable/"+this.std_id
 
