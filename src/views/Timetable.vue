@@ -265,8 +265,8 @@ img {
 }
 
 iframe{
-  width:99vw;
-  height:1300px;
+  width:50vw;
+  height:1150px;
 
  }
 
@@ -285,8 +285,8 @@ iframe{
 }
 .load ul li{
     display: inline-block;
-    font-size: 6vw;
-    letter-spacing: 3px;
+    font-size: 5.5vw;
+    letter-spacing: 2.5px;
     animation: anime 1.5s infinite linear;
 }
 @keyframes anime{
