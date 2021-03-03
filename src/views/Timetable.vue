@@ -47,10 +47,12 @@
             <FinalTable :slot_course="data.data.sched_table[term_cout]" nameTable="แบบ B" />
           </div>
         </div>
-      </div>  
+      </div>        
+      <div class="row justify-content-center">
+
         <iframe :src="form1+form_std+std_id+form_term+data.data.sched_table[term_cout]['term']" v-if='random_form < 50'></iframe>
         <iframe :src="form2+form_std+std_id+form_term+data.data.sched_table[term_cout]['term']" v-if='random_form >= 50'></iframe>
-
+      </div>
       
       <div class="row justify-content-center" style="margin-top:20px">
           <ul class="progressbar"  v-for="i in data.data.sched_table.length" :key="i">
