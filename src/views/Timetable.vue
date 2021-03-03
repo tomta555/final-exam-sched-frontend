@@ -52,7 +52,7 @@
         <iframe :src="form2+form_std+std_id+form_term+data.data.sched_table[term_cout]['term']" v-if='random_form >= 50'></iframe>
 
       
- <div class="row justify-content-center" style="margin-top:20px">
+      <div class="row justify-content-center" style="margin-top:20px">
           <ul class="progressbar"  v-for="i in data.data.sched_table.length" :key="i">
                         <li class='active' v-if='term_cout+1>=i'></li>
                         <li v-else> </li>
@@ -61,21 +61,22 @@
 
 
 
-        <div class="row justify-content-center"  style="margin-top:0" v-if='term_cout<data.data.sched_table.length-1 && data.data.sched_table.length != 1'>
-          <div style="text-align:center; margin:auto 0 auto 0; font-size:2.5vh; color:red" >
+        <div class="row justify-content-center"  style="margin-top:0" >
+          <div style="text-align:center; margin:auto 0 auto 0; font-size:2.5vh; color:red"  v-if='term_cout<data.data.sched_table.length-1 && data.data.sched_table.length != 1'>
             กรุณากดส่งฟอร์มก่อนไปหน้าถัดไป
           </div>
         </div>
           <div class="row justify-content-center">
             <b-btn style="float:right; margin:2%;" @click="plusterm"
              pill size="lg"
+             v-if='term_cout<data.data.sched_table.length-1 && data.data.sched_table.length != 1'
             >
             next {{data.data.sched_table[term_cout+1]['term']}} >>
             </b-btn>
           </div>
         <div style="text-align:center; margin:5; font-size:2.2vh; color:red" v-if='term_cout==data.data.sched_table.length-1' >
             <p>ขอบคุณที่ช่วยแสดงความคิดเห็น</p>
-            จะสุ่มรายชื่อผู้โชคดีวันที่ 12 มีนา และแจ้งไปทางเมล์นะครับ
+             ถ้าสุ่มผู้โชคดีแล้วจะแจ้งไปทาง CMU Mail นะครับ
             <br>
              
           </div>
@@ -294,7 +295,7 @@ iframe{
 }
 .load ul li{
     display: inline-block;
-    font-size: 6.5vw;
+    font-size: 6vw;
     letter-spacing: 3px;
     animation: anime 1.5s infinite linear;
 }
