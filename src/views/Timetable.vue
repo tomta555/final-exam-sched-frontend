@@ -267,8 +267,8 @@ img {
 }
 
 iframe{
-  width:50vw;
-  height:1150px;
+  width:90vw;
+  height:1300px;
 
  }
 
