@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve --port 8000",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "start": "node server"
   },
   "dependencies": {
     "axios": "^0.21.1",
