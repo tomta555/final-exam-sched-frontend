@@ -167,7 +167,7 @@ export default {
   const code_auth = window.location.search.slice(1).split("=")[1];
   const data = qs.stringify({
     code: code_auth,
-    redirect_uri: "http://localhost:8000/Timetable",
+    redirect_uri: "https://affectionate-roentgen-01a06a.netlify.app/timetable",
     client_id: "TG48TWd9TqUgcSMSh5kKva4hepaSnEH45fQHueRu",
     client_secret: "ua4sgC2d7h9BudXTNX3DWyXnTZm6ccycq1sufPaP",
     grant_type: "authorization_code",

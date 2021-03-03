@@ -25,7 +25,7 @@ import qs from "qs";
 export default {
   data(){
     return{
-      link:"https://oauth.cmu.ac.th/v1/Authorize.aspx?response_type=code&client_id=TG48TWd9TqUgcSMSh5kKva4hepaSnEH45fQHueRu&redirect_uri=http://localhost:8000/Timetable&scope=cmuitaccount.basicinfo"
+      link:"https://oauth.cmu.ac.th/v1/Authorize.aspx?response_type=code&client_id=TG48TWd9TqUgcSMSh5kKva4hepaSnEH45fQHueRu&redirect_uri=https://affectionate-roentgen-01a06a.netlify.app/timetable&scope=cmuitaccount.basicinfo"
     }
   }
 };
