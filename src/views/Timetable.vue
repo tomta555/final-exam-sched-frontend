@@ -200,10 +200,7 @@ async get_timetable() {
 }
 
   },
-mounted(){
-      window.onbeforeunload = null
 
-},
   async created(){
 
         this.load_term()
