@@ -1,4 +1,4 @@
-<template>
+<template style='overflow-y: hidden;'>
   <div id="app">
     <img
       alt="CPE logo"
@@ -36,7 +36,7 @@ export default {
 #app {
   background: linear-gradient(173deg, #28283d 80%, #ffffff 10%);
   height: 100vh;
-  overflow-y: hidden;
+
 
 }
 .header {
@@ -62,7 +62,6 @@ export default {
   /* display: flex; */
   align-items: center;
   justify-content: center;
-  overflow-y: hidden;
 }
 
 .button-login {
