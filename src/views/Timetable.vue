@@ -49,9 +49,9 @@
         </div>
       </div>        
       <div class="row justify-content-center">
-
-        <iframe :src="form1+form_std+std_id+form_term+data.data.sched_table[term_cout]['term']" v-if='random_form < 50'></iframe>
-        <iframe :src="form2+form_std+std_id+form_term+data.data.sched_table[term_cout]['term']" v-if='random_form >= 50'></iframe>
+           
+        <iframe :src="form1+form_std+std_id+form_term+data.data.sched_table[term_cout]['term']" v-if='random_form < 50 || !hideGGForm' ></iframe>
+        <iframe :src="form2+form_std+std_id+form_term+data.data.sched_table[term_cout]['term']" v-if='random_form >= 50 || !hideGGForm' ></iframe>
       </div>
       
       <div class="row justify-content-center" style="margin-top:20px">
@@ -200,6 +200,11 @@ async get_timetable() {
 }
 
   },
+  async mounted(){
+    window.onbeforeunload = () => {
+      this.hideGGForm = true
+    }
+  },
   async created(){
 
         this.load_term()
@@ -237,7 +242,6 @@ async get_timetable() {
         localStorage.term_cout = newterm_cout;
       }
     }
- 
 }
 
 
@@ -268,7 +272,7 @@ img {
 
 iframe{
   width:90vw;
-  height:1300px;
+  height:1100px;
 
  }
 
