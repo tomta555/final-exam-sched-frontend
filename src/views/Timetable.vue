@@ -131,7 +131,6 @@ export default {
     plusterm: function(term_cout){
       this.random_form = Math.random()*101;
       window.scrollTo(0, top);
-      window.onbeforeunload = null
       return (this.term_cout++)
     },
     showModal() {
@@ -201,7 +200,10 @@ async get_timetable() {
 }
 
   },
+mounted(){
+      window.onbeforeunload = null
 
+},
   async created(){
 
         this.load_term()
@@ -269,7 +271,7 @@ img {
 
 iframe{
   width:90vw;
-  height:1100px;
+  height:1200px;
 
  }
 
