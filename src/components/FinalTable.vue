@@ -15,7 +15,7 @@
     <td v-for="j in 3" :key="j">
       <div v-for="(course, k) in slot_course[((3*i)-1) + j]" :key="k" style="text-align:center; ">
           <!-- <button :aria-label=course_id[course.substring(0,6)] data-balloon-pos="up">{{course}}</button> -->
-        <button data-balloon-blunt :aria-label=course_id[course.substring(0,6)] data-balloon-pos="up"> <div class="tooltip">{{course}} </div></button>
+        <button data-balloon-blunt :aria-label=course_id[course.substring(0,6)] data-balloon-pos="up"><a style='border-bottom: 1px dotted;'>{{course}}</a> </button>
 
 
 
@@ -3898,19 +3898,5 @@ button:hover{
     transform: translate(-50%, var(--balloon-move)); }
   [aria-label][data-balloon-pos][data-balloon-length]:after {
     white-space: normal; }
-.tooltip {
-    color: #000000;
-    display: none;
-    left: 50px;
-    padding: 10px;
-    position: absolute;
-    top: 40px;
-    width: 250px;    
-    text-decoration: none;
-    z-index: 100;
-}
 
-span.wrap:hover .tooltip {
-    display: block;
-}
 </style>
