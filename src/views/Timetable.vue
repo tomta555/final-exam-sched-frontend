@@ -50,8 +50,8 @@
       </div>        
       <div class="row justify-content-center">
            
-        <iframe :src="form1+form_std+std_id+form_term+data.data.sched_table[term_cout]['term']" v-if='random_form < 50 && !hideGGForm' ></iframe>
-        <iframe :src="form2+form_std+std_id+form_term+data.data.sched_table[term_cout]['term']" v-if='random_form >= 50 && !hideGGForm' ></iframe>
+        <iframe :src="form1+form_std+std_id+form_term+data.data.sched_table[term_cout]['term']" v-if='random_form < 50' ></iframe>
+        <iframe :src="form2+form_std+std_id+form_term+data.data.sched_table[term_cout]['term']" v-if='random_form >= 50' ></iframe>
       </div>
       
       <div class="row justify-content-center" style="margin-top:20px">
@@ -131,6 +131,7 @@ export default {
     plusterm: function(term_cout){
       this.random_form = Math.random()*101;
       window.scrollTo(0, top);
+      window.onbeforeunload = null
       return (this.term_cout++)
     },
     showModal() {
@@ -200,11 +201,7 @@ async get_timetable() {
 }
 
   },
-  async mounted(){
-    window.onbeforeunload = () => {
-      this.hideGGForm = true
-    }
-  },
+
   async created(){
 
         this.load_term()

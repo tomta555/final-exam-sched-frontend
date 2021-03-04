@@ -15,7 +15,7 @@
     <td v-for="j in 3" :key="j">
       <div v-for="(course, k) in slot_course[((3*i)-1) + j]" :key="k" style="text-align:center; ">
           <!-- <button :aria-label=course_id[course.substring(0,6)] data-balloon-pos="up">{{course}}</button> -->
-        <button data-balloon-blunt :aria-label=course_id[course.substring(0,6)] data-balloon-pos="up"><a style='border-bottom: 1px dotted;'>{{course}}</a> </button>
+        <button data-balloon-blunt :aria-label=course_id[course.substring(0,6)] data-balloon-pos="up"><a style='border-bottom: 2px dotted;'>{{course}}</a> </button>
 
 
 
