@@ -36,6 +36,8 @@ export default {
 #app {
   background: linear-gradient(173deg, #28283d 80%, #ffffff 10%);
   height: 100vh;
+  overflow-y: hidden;
+
 }
 .header {
   text-align: center;
@@ -60,7 +62,7 @@ export default {
   /* display: flex; */
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  overflow-y: hidden;
 }
 
 .button-login {
