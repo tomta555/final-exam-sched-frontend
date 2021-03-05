@@ -94,9 +94,9 @@
             <li>I</li>
             <li>N</li>
             <li>G</li>
-            <li>.</li>
-            <li>.</li>
-            <li>.</li>
+            <li style='animation: anime 0.15s infinite linear;'>.</li>
+            <li style='animation: anime 0.125s infinite linear;'>.</li>
+            <li style='animation: anime 0.1s infinite linear;'>.</li>
 
         </ul>
     </div>
@@ -293,52 +293,18 @@ iframe{
     display: inline-block;
     font-size: 5.5vw;
     letter-spacing: 2.5px;
-    /* animation: anime 1.5s infinite linear; */
 }
 @keyframes anime{
     0%{
         transform: translateY(0);
-        letter-spacing: 3px;
-        color: #808080;
-        text-shadow: 1px 1px 0px #000;
     }
     50%{
-        transform: translateY(-30px);
-        letter-spacing: 15px;
-        color: #ffc107; 
-        text-shadow: 5px 10px 1px #000;
+        transform: translateY(-10px);
     }
     100%{
         transform: translateY(0);
-        letter-spacing: 3px;
-        color: #808080;
-        text-shadow: 1px 1px 0px #000;
     }
 }
-ul li:nth-child(1){
-    animation-delay: 0s;
-}
-ul li:nth-child(2){
-    animation-delay: .1s;
-}
-ul li:nth-child(3){
-    animation-delay: .2s;
-}
-ul li:nth-child(4){
-    animation-delay: .3s;
-}
-ul li:nth-child(5){
-    animation-delay: .4s;
-}
-ul li:nth-child(6){
-    animation-delay: .5s;
-}
-ul li:nth-child(7){
-    animation-delay: .6s;
-}
-
-
-
 .progressbar li{
   float: left;
   width: 3.28%;
