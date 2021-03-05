@@ -64,7 +64,7 @@
 
 
         <div class="row justify-content-center"  style="margin-top:0" >
-          <div style="text-align:center; margin:auto 0 auto 0; font-size:2.5vh; color:red"  v-if='term_cout<data.data.sched_table.length-1 && data.data.sched_table.length != 1'>
+          <div style="text-align:center; margin:auto 0 auto 0; font-size:2.5vh; color:red"  v-if='term_cout < data.data.sched_table.length-1 && data.data.sched_table.length != 1'>
             กรุณากดส่งฟอร์มก่อนไปหน้าถัดไป
           </div>
         </div>
@@ -94,6 +94,10 @@
             <li>I</li>
             <li>N</li>
             <li>G</li>
+            <li>.</li>
+            <li>.</li>
+            <li>.</li>
+
         </ul>
     </div>
   </div>
@@ -289,7 +293,7 @@ iframe{
     display: inline-block;
     font-size: 5.5vw;
     letter-spacing: 2.5px;
-    animation: anime 1.5s infinite linear;
+    /* animation: anime 1.5s infinite linear; */
 }
 @keyframes anime{
     0%{
